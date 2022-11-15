@@ -14,6 +14,9 @@
 		54021056291E84B20011F822 /* ScissorsGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54021054291E84B20011F822 /* ScissorsGame.xcdatamodeld */; };
 		54021058291E84B30011F822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54021057291E84B30011F822 /* Assets.xcassets */; };
 		5402105B291E84B30011F822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54021059291E84B30011F822 /* LaunchScreen.storyboard */; };
+		54171A142922879500B66285 /* ViewControllerSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54171A132922879500B66285 /* ViewControllerSecond.swift */; };
+		54171A162922881200B66285 /* ViewControllerThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54171A152922881200B66285 /* ViewControllerThird.swift */; };
+		54A1696C2923D14500F2A2B7 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A1696B2923D14500F2A2B7 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		54021057291E84B30011F822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5402105A291E84B30011F822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5402105C291E84B30011F822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54171A132922879500B66285 /* ViewControllerSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSecond.swift; sourceTree = "<group>"; };
+		54171A152922881200B66285 /* ViewControllerThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerThird.swift; sourceTree = "<group>"; };
+		54A1696B2923D14500F2A2B7 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,11 @@
 			children = (
 				5402104B291E84B20011F822 /* AppDelegate.swift */,
 				5402104D291E84B20011F822 /* SceneDelegate.swift */,
-				5402104F291E84B20011F822 /* ViewController.swift */,
 				54021051291E84B20011F822 /* Main.storyboard */,
+				5402104F291E84B20011F822 /* ViewController.swift */,
+				54A1696B2923D14500F2A2B7 /* Game.swift */,
+				54171A132922879500B66285 /* ViewControllerSecond.swift */,
+				54171A152922881200B66285 /* ViewControllerThird.swift */,
 				54021057291E84B30011F822 /* Assets.xcassets */,
 				54021059291E84B30011F822 /* LaunchScreen.storyboard */,
 				5402105C291E84B30011F822 /* Info.plist */,
@@ -143,7 +152,10 @@
 			files = (
 				54021056291E84B20011F822 /* ScissorsGame.xcdatamodeld in Sources */,
 				54021050291E84B20011F822 /* ViewController.swift in Sources */,
+				54A1696C2923D14500F2A2B7 /* Game.swift in Sources */,
+				54171A162922881200B66285 /* ViewControllerThird.swift in Sources */,
 				5402104C291E84B20011F822 /* AppDelegate.swift in Sources */,
+				54171A142922879500B66285 /* ViewControllerSecond.swift in Sources */,
 				5402104E291E84B20011F822 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
