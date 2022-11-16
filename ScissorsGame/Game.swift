@@ -8,14 +8,20 @@
 import Foundation
 
 class Game{
-    var pick = 0
     var count = 0
+    var pick = 0
     
     
-    
-    func rpc(p: Int){
+    init(p: Int){
         pick = p
+        if(p<1){
+            print("Win")
+            count++
+        }
+        else if (p )
+            
     }
+  
     
     func reset(){
         count = 0
