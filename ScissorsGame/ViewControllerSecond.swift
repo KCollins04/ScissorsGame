@@ -48,8 +48,8 @@ class ViewControllerSecond: UIViewController {
           pointSecond.text = "\(store.count2)"
           pointOne.text = "\(store.count)"
         
-        var r = Game .imc(a)
-        imageSecond.image = UIImage(named: r)
+        var cImage = Game.imageComputer(v: a)
+        imageSecond.image = UIImage(named: cImage)
           
     }
     

@@ -12,7 +12,6 @@ class Game{
     var count2 = 0
     var pick = 0
     var wl = ""
-    var imageG = ""
     
     
     init(p: Int, c: Int){
@@ -37,16 +36,18 @@ class Game{
         }
         }
             
-    func imc(v: Int){
+    func imageComputer(v: Int)-> String{
+        var num=""
         if v == 0 {
-            imageG = "rock"
+            num = "rock"
         }
         else if v == 1 {
-            imageG = "paper"
+            num = "paper"
         }
         else if v == 2 {
-            imageG = "scissors"
+            num = "scissors"
         }
+        return num
     }
     
     
