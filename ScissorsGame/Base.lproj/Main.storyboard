@@ -42,7 +42,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="center" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="My5-Qj-4b2">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="88" translatesAutoresizingMaskIntoConstraints="NO" id="My5-Qj-4b2">
                                 <rect key="frame" x="23" y="312" width="351" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHz-S0-QRE">
@@ -67,32 +67,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3e-2I-WO5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="koe-rq-6yZ">
                                 <rect key="frame" x="78" y="387" width="242" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemMintColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="koe-rq-6yZ">
-                                <rect key="frame" x="78" y="387" width="242" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOT-ab-KCj">
-                                <rect key="frame" x="78" y="71" width="242" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-qD-sGI">
-                                <rect key="frame" x="95" y="81" width="208" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="5nQ-Xn-gRv">
-                                <rect key="frame" x="0.0" y="583" width="390" height="34.333333333333336"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="5nQ-Xn-gRv">
+                                <rect key="frame" x="0.0" y="583" width="390" height="34.333333333333371"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKA-6m-xQL">
                                         <rect key="frame" x="0.0" y="0.0" width="88" height="34.333333333333336"/>
@@ -125,10 +104,36 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="3Ub-UK-Z8q" firstAttribute="leading" secondItem="rKA-6m-xQL" secondAttribute="trailing" constant="63" id="AWn-y8-OSR"/>
+                                    <constraint firstItem="3Ub-UK-Z8q" firstAttribute="leading" secondItem="rKA-6m-xQL" secondAttribute="trailing" constant="63" id="Qs5-kw-Ue6"/>
+                                    <constraint firstItem="3wa-tL-1W9" firstAttribute="leading" secondItem="3Ub-UK-Z8q" secondAttribute="trailing" constant="63" id="ohh-P4-tjS"/>
+                                </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sad-qD-sGI">
+                                <rect key="frame" x="74" y="74" width="242" height="171"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f74-J8-QJK"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="Sad-qD-sGI" firstAttribute="height" secondItem="dL4-s4-mRS" secondAttribute="height" multiplier="0.202607" id="2wz-m8-cpz"/>
+                            <constraint firstItem="5nQ-Xn-gRv" firstAttribute="leading" secondItem="f74-J8-QJK" secondAttribute="leading" id="BeL-2Y-tbu"/>
+                            <constraint firstItem="My5-Qj-4b2" firstAttribute="leading" secondItem="f74-J8-QJK" secondAttribute="leading" constant="23" id="FhE-m0-aMm"/>
+                            <constraint firstItem="Sad-qD-sGI" firstAttribute="leading" secondItem="f74-J8-QJK" secondAttribute="leading" constant="74" id="MPY-sD-2C0"/>
+                            <constraint firstItem="5nQ-Xn-gRv" firstAttribute="height" secondItem="dL4-s4-mRS" secondAttribute="height" multiplier="0.0406793" id="Q4x-de-RPE"/>
+                            <constraint firstItem="koe-rq-6yZ" firstAttribute="top" secondItem="My5-Qj-4b2" secondAttribute="bottom" constant="25" id="Tdh-cu-970"/>
+                            <constraint firstItem="f74-J8-QJK" firstAttribute="trailing" secondItem="My5-Qj-4b2" secondAttribute="trailing" constant="16" id="WU7-Qq-7mq"/>
+                            <constraint firstItem="My5-Qj-4b2" firstAttribute="top" secondItem="Sad-qD-sGI" secondAttribute="bottom" constant="67" id="XrX-n0-NmH"/>
+                            <constraint firstItem="My5-Qj-4b2" firstAttribute="height" secondItem="dL4-s4-mRS" secondAttribute="height" multiplier="0.0592417" id="Zfx-yk-Z6T"/>
+                            <constraint firstItem="Sad-qD-sGI" firstAttribute="top" secondItem="f74-J8-QJK" secondAttribute="top" constant="27" id="aaX-Gu-30O"/>
+                            <constraint firstItem="5nQ-Xn-gRv" firstAttribute="top" secondItem="koe-rq-6yZ" secondAttribute="bottom" constant="48" id="dVP-bc-SjK"/>
+                            <constraint firstItem="koe-rq-6yZ" firstAttribute="leading" secondItem="f74-J8-QJK" secondAttribute="leading" constant="78" id="iIX-qI-qZs"/>
+                            <constraint firstItem="f74-J8-QJK" firstAttribute="trailing" secondItem="koe-rq-6yZ" secondAttribute="trailing" constant="70" id="jKX-AU-NeR"/>
+                            <constraint firstItem="f74-J8-QJK" firstAttribute="trailing" secondItem="Sad-qD-sGI" secondAttribute="trailing" constant="74" id="juj-0s-70Z"/>
+                            <constraint firstItem="koe-rq-6yZ" firstAttribute="height" secondItem="dL4-s4-mRS" secondAttribute="height" multiplier="0.175355" id="kh2-Ii-FU9"/>
+                            <constraint firstItem="5nQ-Xn-gRv" firstAttribute="trailing" secondItem="f74-J8-QJK" secondAttribute="trailing" id="teC-5c-SYh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="play.rectangle" catalog="system" id="awP-Hm-ZMF"/>
                     <connections>
@@ -214,20 +219,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

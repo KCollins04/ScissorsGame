@@ -20,6 +20,9 @@ class ViewControllerSecond: UIViewController {
 
  var t = 0
  var a = 0
+ var point1 = 0
+var point2=0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,12 +34,16 @@ class ViewControllerSecond: UIViewController {
         imageOne.image = UIImage(named: "rock")
       t=0
         a = Int.random(in: 0..<3)
+        print(a)
       let store = Game.init(p: t, c: a)
-      pointSecond.text = "\(store.count2)"
-        pointOne.text = "\(store.count)"
+        point1 += store.count
+        point2 += store.count2
+      pointSecond.text = "\(point2)"
+        pointOne.text = "\(point1)"
       var cImage = imageComputer(v: a)
       imageSecond.image = UIImage(named: cImage)
-        
+        countdown.text = store.wl
+
     }
     
     
@@ -44,12 +51,14 @@ class ViewControllerSecond: UIViewController {
         imageOne.image = UIImage(named: "paper")
        t=1
           a = Int.random(in: 0..<3)
+        print(a)
         let store = Game.init(p: t, c: a)
         pointSecond.text = "\(store.count2)"
           pointOne.text = "\(store.count)"
         var cImage = imageComputer(v: a)
         imageSecond.image = UIImage(named: cImage)
-          
+        countdown.text = store.wl
+
     }
     
     
@@ -57,12 +66,14 @@ class ViewControllerSecond: UIViewController {
         imageOne.image = UIImage(named: "Scissors")
         t=2
         a = Int.random(in: 0..<3)
+        print(a)
       let store = Game.init(p: t, c: a)
       pointSecond.text = "\(store.count2)"
         pointOne.text = "\(store.count)"
       var cImage = imageComputer(v: a)
       imageSecond.image = UIImage(named: cImage)
-        
+        countdown.text = store.wl
+
     }
     
     

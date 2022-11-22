@@ -36,6 +36,11 @@ class Game{
         }
     }
     
+    init(){
+        count = 0
+        count2 = 0
+        
+    }
     
     
     
