@@ -31,11 +31,11 @@ class ViewControllerSecond: UIViewController {
         imageOne.image = UIImage(named: "rock")
       t=0
         a = Int.random(in: 0..<3)
-        var store = Game.init(p: t, c: a)
-        pointSecond.text = "\(store.count2)"
+      let store = Game.init(p: t, c: a)
+      pointSecond.text = "\(store.count2)"
         pointOne.text = "\(store.count)"
-        
- 
+      var cImage = imageComputer(v: a)
+      imageSecond.image = UIImage(named: cImage)
         
     }
     
@@ -44,11 +44,10 @@ class ViewControllerSecond: UIViewController {
         imageOne.image = UIImage(named: "paper")
        t=1
           a = Int.random(in: 0..<3)
-          var store = Game.init(p: t, c: a)
-          pointSecond.text = "\(store.count2)"
+        let store = Game.init(p: t, c: a)
+        pointSecond.text = "\(store.count2)"
           pointOne.text = "\(store.count)"
-        
-        var cImage = Game.imageComputer(v: a)
+        var cImage = imageComputer(v: a)
         imageSecond.image = UIImage(named: cImage)
           
     }
@@ -58,12 +57,29 @@ class ViewControllerSecond: UIViewController {
         imageOne.image = UIImage(named: "Scissors")
         t=2
         a = Int.random(in: 0..<3)
-        var store = Game.init(p: t, c: a)
-        pointSecond.text = "\(store.count2)"
+      let store = Game.init(p: t, c: a)
+      pointSecond.text = "\(store.count2)"
         pointOne.text = "\(store.count)"
+      var cImage = imageComputer(v: a)
+      imageSecond.image = UIImage(named: cImage)
         
     }
     
+    
+    func imageComputer(v: Int)-> String{
+        var num=""
+        if v == 0 {
+            num = "rock"
+        }
+        else if v == 1 {
+            num = "paper"
+        }
+        else if v == 2 {
+            num = "scissors"
+        }
+        return num
+    }
+
 
 
 }
