@@ -18,15 +18,15 @@ class ViewControllerSecond: UIViewController {
     @IBOutlet weak var pointSecond: UILabel!
     @IBOutlet weak var pointOne: UILabel!
 
+    var count = 0
+    var count2 = 0
  var t = 0
  var a = 0
- var point1 = 0
-var point2=0
+ 
     
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+            
     }
     
     
@@ -36,11 +36,10 @@ var point2=0
         a = Int.random(in: 0..<3)
         print(a)
       let store = Game.init(p: t, c: a)
-        point1 += store.count
-        point2 += store.count2
-      pointSecond.text = "\(point2)"
-        pointOne.text = "\(point1)"
-      var cImage = imageComputer(v: a)
+        
+        pointSecond.text = "\(points2())"
+          pointOne.text = "\(points1())"
+        let cImage = imageComputer(v: a)
       imageSecond.image = UIImage(named: cImage)
         countdown.text = store.wl
 
@@ -53,12 +52,11 @@ var point2=0
           a = Int.random(in: 0..<3)
         print(a)
         let store = Game.init(p: t, c: a)
-        pointSecond.text = "\(store.count2)"
-          pointOne.text = "\(store.count)"
-        var cImage = imageComputer(v: a)
+        pointSecond.text = "\(points2())"
+          pointOne.text = "\(points1())"
+          let cImage = imageComputer(v: a)
         imageSecond.image = UIImage(named: cImage)
-        countdown.text = store.wl
-
+          countdown.text = store.wl
     }
     
     
@@ -67,12 +65,12 @@ var point2=0
         t=2
         a = Int.random(in: 0..<3)
         print(a)
-      let store = Game.init(p: t, c: a)
-      pointSecond.text = "\(store.count2)"
-        pointOne.text = "\(store.count)"
-      var cImage = imageComputer(v: a)
-      imageSecond.image = UIImage(named: cImage)
-        countdown.text = store.wl
+        let store = Game.init(p: t, c: a)
+        pointSecond.text = "\(points2())"
+          pointOne.text = "\(points1())"
+          let cImage = imageComputer(v: a)
+        imageSecond.image = UIImage(named: cImage)
+          countdown.text = store.wl
 
     }
     
@@ -86,11 +84,36 @@ var point2=0
             num = "paper"
         }
         else if v == 2 {
-            num = "scissors"
+            num = "Scissors"
         }
         return num
     }
 
-
+    func points1()-> Int{
+        let store = Game.init(p: t, c: a)
+        if store.wl == "Win"{
+            count = count + 1
+        }
+        else if store.wl == "Lost"{
+            count = count - 1
+        }
+        
+        return count
+    }
+    
+    
+    func points2()-> Int{
+        let store = Game.init(p: t, c: a)
+        if store.wl == "Win"{
+            count2 = count2 - 1
+            
+        }
+        else if store.wl == "Lost"{
+            count2 = count2 + 1
+            
+        }
+    
+        return count2
+    }
 
 }

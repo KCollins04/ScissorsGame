@@ -9,10 +9,15 @@ import UIKit
 
 class ViewControllerThird: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
       
+    }
+    
+    
+    @IBAction func Restart(_ sender: UIButton) {
     }
     
 

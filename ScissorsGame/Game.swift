@@ -10,37 +10,36 @@ import Foundation
 class Game{
     var count = 0
     var count2 = 0
-    var pick = 0
     var wl = ""
     
     
+    
     init(p: Int, c: Int){
-        pick = p
-        if(p<c){
-            wl = "Win"
-            count+=1
+        if p==c{
+            wl = "Draw"
         }
-        else if (p>c){
-            wl = "Win"
-            count+=1
+        else if p==0, c==1{
+            wl="Lost"
         }
-        else if (p == 2 && c == 1){
-            if(p>c){
-                wl = "Win"
-                count+=1
-            }
+        else if p==0, c==2{
+            wl="Win"
         }
-        else{
-            wl = "lost"
-            count2 += 1
+        else if p==1, c==0{
+            wl="Win"
         }
+        else if p==1, c==2{
+            wl="Lost"
+        }
+        else if p==2, c==0{
+            wl="Lost"
+        }
+        else if p==2, c==1{
+            wl="Win"
+        }
+
     }
     
-    init(){
-        count = 0
-        count2 = 0
-        
-    }
+    
     
     
     
