@@ -27,24 +27,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qj7-l8-eBb">
-                                <rect key="frame" x="16" y="688" width="345" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ths-RF-3JW">
+                                <rect key="frame" x="154" y="603" width="75" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Image One"/>
-                                    <segment title="Imae 2"/>
-                                    <segment title="Image 3"/>
-                                </segments>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="segmentedImage:" destination="BYZ-38-t0r" eventType="valueChanged" id="xX5-Mt-i8I"/>
+                                    <action selector="changeBackGround:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VVq-OE-dKc"/>
                                 </connections>
-                            </segmentedControl>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="homekit" catalog="system" id="a1b-eQ-qQD"/>
                     <navigationItem key="navigationItem" id="OWQ-At-xSX"/>
+                    <connections>
+                        <outlet property="imageScreen" destination="fIf-rH-GCi" id="Avh-bV-7cW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
