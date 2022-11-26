@@ -9,6 +9,7 @@ import UIKit
 
 class ViewControllerSecond: UIViewController {
 
+  
     
     @IBOutlet weak var countdown: UILabel!
     
@@ -22,11 +23,21 @@ class ViewControllerSecond: UIViewController {
     var count2 = 0
  var t = 0
  var a = 0
+    let defaults  = UserDefaults.standard
  
-    
         override func viewDidLoad() {
         super.viewDidLoad()
+            if let p = defaults.object(forKey: "Player Points"){
+                count = p as! Int
             
+                  pointOne.text = "\(count)"
+            }
+            if let z = defaults.object(forKey: "Computer Points"){
+                count2 = z as! Int
+               
+                  pointSecond.text = "\(count2)"
+                
+            }
     }
     
     
@@ -75,6 +86,16 @@ class ViewControllerSecond: UIViewController {
     }
     
     
+    
+    @IBAction func resetButton(_ sender: UIButton) {
+           count=0
+        count2=0
+        pointSecond.text = "\(count)"
+          pointOne.text = "\(count2)"
+        
+    }
+    
+    
     func imageComputer(v: Int)-> String{
         var num=""
         if v == 0 {
@@ -116,4 +137,13 @@ class ViewControllerSecond: UIViewController {
         return count2
     }
 
+   
+    @IBAction func saveButton(_ sender: UIButton) {
+      
+        defaults.set(count, forKey: "Player Points")
+        defaults.set(count2, forKey: "Computer Points")
+    }
+    
+    
+    
 }
