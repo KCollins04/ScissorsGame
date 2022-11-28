@@ -14,28 +14,18 @@ class Game{
     
     
     
+    
     init(p: Int, c: Int){
-        if p==c{
-            wl = "Draw"
+        switch (p,c) {
+        case (0,1): wl = "Lost"
+        case (0,2): wl = "Win"
+        case (1,0): wl = "Win"
+        case (1,2): wl = "Lost"
+        case (2,0): wl = "Lost"
+        case (2,1): wl = "Win"
+        default: wl = "Draw"
         }
-        else if p==0, c==1{
-            wl="Lost"
-        }
-        else if p==0, c==2{
-            wl="Win"
-        }
-        else if p==1, c==0{
-            wl="Win"
-        }
-        else if p==1, c==2{
-            wl="Lost"
-        }
-        else if p==2, c==0{
-            wl="Lost"
-        }
-        else if p==2, c==1{
-            wl="Win"
-        }
+     
 
     }
     
